@@ -87,6 +87,12 @@ const People = mongoose.model('People', new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	displayImageUrn: {
+		type: String,
+		required: true,
+		unique: true
+
+	},
 	headline: {
 		type: String,
 		required: true

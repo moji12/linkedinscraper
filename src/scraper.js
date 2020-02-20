@@ -27,6 +27,9 @@ function processPeopleProfile(item, result) {
 	if (item.$type == 'com.linkedin.voyager.dash.identity.profile.Profile' && item.objectUrn) {
 		result.firstName = item.firstName;
 		result.lastName = item.lastName;
+		var rootimageUrl= item.profilePicture.displayImageReference.vectorImage.rootUrl;
+		var fileIdentifyingUrlPathSegment= item.profilePicture.displayImageReference.vectorImage.artifacts[0].fileIdentifyingUrlPathSegment;
+		result.profilePictureUrl = rootimageUrl+fileIdentifyingUrlPathSegment
 		result.headline = item.headline;
 		result.location = item.locationName;
 		result.address = item.address;

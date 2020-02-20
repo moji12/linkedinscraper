@@ -164,6 +164,7 @@ async function scrapPeopleProfile(page, url = null) {
 		return {
 			firstName: name[0],
 			lastName: name[1],
+			displayImageUrn: $('a.profile-photo-edit__preview ember-view').text().trim(),
 			headline: $('h2.pv-top-card-section__headline')
 				.text()
 				.trim(),
